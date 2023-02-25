@@ -1,1 +1,10 @@
-
+name: Main Workflow
+on:
+  push:
+  workflow_dispatch:
+jobs:
+  first-job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Run echo
+        run: echo 'Hello World'
