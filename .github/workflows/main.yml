@@ -5,8 +5,14 @@ on:
 jobs:
   first-job:
     runs-on: ubuntu-latest
+    outputs:
+      out1: ${{ steps.echo1.outputs.test}}
     steps:
       - name: Run echo
+        id: echo1
         run: |
           echo 'Hello World'
           echo 'Test is working 🚀'
+          echo "test=Output test is working 😎" >> "$GITHUB_OUTPUT"
+      - name: Echo Output
+        run: echo "${{ needs.echo1.outputs.test }}"
