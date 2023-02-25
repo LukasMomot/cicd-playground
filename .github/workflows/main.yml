@@ -13,6 +13,6 @@ jobs:
         run: |
           echo 'Hello World'
           echo 'Test is working 🚀'
-          echo "test=Output test is working 😎" >> "$GITHUB_OUTPUT"
+          echo "test=hello" >> "$GITHUB_OUTPUT"
       - name: Echo Output
         run: echo "${{ needs.echo1.outputs.test }}"
