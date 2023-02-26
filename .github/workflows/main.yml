@@ -31,6 +31,8 @@ jobs:
         name: Install deps
       - run: npm run build
         name: Build application
+      - run: npm run test
+        name: Execute unit tests
       - uses: actions/upload-artifact@v3
         name: Create artifact
         with:
