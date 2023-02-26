@@ -37,7 +37,7 @@ jobs:
         name: Create artifact
         with:
           name: cicd-application
-          path: cicd-playground/dist
+          path: dist
   deploy:
     runs-on: ubuntu-latest
     needs: build
@@ -46,5 +46,9 @@ jobs:
         name: Download artifact
         with:
           name: cicd-application
-      - run: ls -a
+      - run: |
+          ls -a
+          cd cicd-playground
+          ls -a
+
         name: Display folders
