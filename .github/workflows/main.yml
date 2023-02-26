@@ -29,5 +29,5 @@ jobs:
           node-version: 18
       - run: npm ci
         name: Install deps
-      - run: npm build
+      - run: npm run build
         name: Build application
