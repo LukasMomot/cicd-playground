@@ -1,0 +1,8 @@
+name: Deploy confirmation
+on: workflow_call
+jobs:
+  confirmation:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Confirmation
+        run: echo "This is just confirmation for deploy ✅"
