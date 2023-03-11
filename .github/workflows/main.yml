@@ -27,6 +27,11 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: 18
+      - name: Store Node Version
+        id: nodev
+        run: echo "NODE_VERSION=$(node -v)" >> $GITHUB_OUTPUT
+      - name: Print Node Version
+        run: echo "The used node version is ${{ steps.nodev.outputs.NODE_VERSION }}""
       - run: npm ci
         name: Install deps
       - run: npm run build
