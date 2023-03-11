@@ -62,7 +62,7 @@ jobs:
           ls -a
         name: Display folders
       - name: Run script
-        run: ./.github/scripts/first.sh Stara
+        run: ./.github/scripts/first.sh
         shell: bash
   confirmation:
     needs: deploy
