@@ -50,7 +50,7 @@ jobs:
     needs: build
     steps:
       - name: Check Deploy
-        if: contains(needs.build.outputs.nodev, '.2'))
+        if: contains(needs.build.outputs.nodev, '.2')
         run: echo "Deployment can be started ✅"
       - uses: actions/download-artifact@v3
         name: Download artifact
