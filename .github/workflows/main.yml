@@ -61,6 +61,9 @@ jobs:
           cd cicd-playground
           ls -a
         name: Display folders
+      - name: Run script
+        run: ./github/scripts/first.sh Stara
+        shell: bash
   confirmation:
     needs: deploy
     uses: ./.github/workflows/confirmation-reusable.yml
