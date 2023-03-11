@@ -31,7 +31,7 @@ jobs:
         id: nodev
         run: echo "NODE_VERSION=$(node -v)" >> $GITHUB_OUTPUT
       - name: Print Node Version
-        run: echo "The used node version is ${{ steps.nodev.outputs.NODE_VERSION }}""
+        run: echo "The used node version is ${{ steps.nodev.outputs.NODE_VERSION }}"
       - run: npm ci
         name: Install deps
       - run: npm run build
