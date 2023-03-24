@@ -1,0 +1,13 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: my-app
+spec:
+  template:
+    spec:
+      containers:
+        - name: my-container
+          image: my-registry/my-image:${IMAGE_TAG}
+          env:
+            - name: MY_ENVIRONMENT
+              value: ${ENVIRONMENT}

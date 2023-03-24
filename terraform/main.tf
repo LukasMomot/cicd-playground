@@ -6,5 +6,13 @@ terraform {
       version = "=3.0.0"
     }
   }
+}
 
+provider azurerm {
+  features {}
+}
+
+resource "azurem_resource_group" "rg" {
+  name = "rg-first"
+  location = "West Europ"
 }
